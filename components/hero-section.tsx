@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Sparkles } from "lucide-react"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -26,9 +27,11 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="text-lg px-8 py-4 animate-pulse-glow">
-              ¡Probar Gratis por 3 meses!
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" className="text-lg px-8 py-4 animate-pulse-glow" asChild>
+              <Link href="/marketplace">
+                ¡Explorar Agentes Ahora!
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-transparent">
               Ver Demo
